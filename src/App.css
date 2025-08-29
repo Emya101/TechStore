@@ -1,6 +1,9 @@
 .App {
-  max-width:200px;
-  margin:0 auto;
-  padding: 64px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+  padding: 64px 50px 5px;
 }
 
