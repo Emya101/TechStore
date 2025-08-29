@@ -14,6 +14,7 @@ function App() {
            "manifest.json provides metadata",
            "Supreme is the best man fr(no glaze)"
         ],
+        stockCount:10,
     },{
         ImageSrc:"images/list.jpg",
         title:"imagine using lists",
@@ -21,7 +22,8 @@ function App() {
            "manifest.json provides metadata",
            "manifest.json provides metadata",
            "Supreme is the best man fr(no glaze)"
-        ],},
+        ],
+      stockCount:0},
       {
         ImageSrc:"images/dragons.png",
         title:"imagine dragons",
@@ -30,6 +32,7 @@ function App() {
            "manifest.json provides metadata",
            "Supreme is the best man fr(no glaze)"
         ],
+        stockCount:100,
       }]
 
     const listnum=[
