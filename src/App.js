@@ -4,7 +4,7 @@ import { Fragment } from 'react/jsx-runtime';
 import { ProductCard } from './components/ProductCard';
 import {Single} from './components/Single';
 import {Property} from './components/Property';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
     const products=[{
@@ -49,7 +49,7 @@ function App() {
     }
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Property>
         {products.map((product,index)=> (
           <ProductCard 
@@ -80,7 +80,7 @@ function App() {
         .filter(product=>product.price>2000)
         .map(product=>(
           <Fragment key={product.title}>
-          <hr className='tinystyle'/>
+          <hr className={styles.tinystyle}/>
           <p key={product.title}>
             {product.title} costs {product.price}
             </p>
