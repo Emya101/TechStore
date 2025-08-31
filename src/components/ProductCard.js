@@ -1,3 +1,5 @@
+import './ProductCard.css'
+
 export function ProductCard({prod,price,background="blue",onPurchase,listnum,...restprops}){
 
     function getProductTitle(title){
@@ -5,18 +7,7 @@ export function ProductCard({prod,price,background="blue",onPurchase,listnum,...
     }
 
   return (
-    <article style={{
-      background,
-      border:"1px solid white",
-      borderRadius:"8px",
-      padding:"16px",
-      textAlign:"center",
-      justifyContent:"center",
-      flexDirection:"column",
-      width:"auto",
-      height:"400px",
-      
-      }}>
+    <article className="container" style={{background}}>
     <h2>{getProductTitle(prod.title)}</h2>
     <p> Hello my friend,i have a list of {price}</p>
     <p> {prod.specification[0]}</p>
@@ -35,9 +26,9 @@ function Status ({stockCount}){
 
   // return<p style={{fontSize:"14px",color:'lightgreen'}}>{stockCount} items available right now</p>
 
-  const NotAvailableTemplate=<p style={{fontSize:"14px",color:'lightsalmon'}}>Not available</p>
+  const NotAvailableTemplate=<p className='NotAvailableTemplate'>Not available</p>
 
-  const AvailableTemplate=  <p style={{fontSize:"14px",color:'lightgreen'}}>{stockCount} items available right now</p>
+  const AvailableTemplate= <p className='AvailableTemplate'>{stockCount} items available right now</p>
 
   return stockCount===0 ? 
   (NotAvailableTemplate)

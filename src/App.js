@@ -1,3 +1,4 @@
+//C:\Users\emhen\OneDrive\Documents\Desktop\ReactPractice\reactpractice
 import logo from './logo.svg';
 import { Fragment } from 'react/jsx-runtime';
 import { ProductCard } from './components/ProductCard';
@@ -54,6 +55,7 @@ function App() {
           <ProductCard 
           key={product.title}//dont use index if your list willhave reordered or deleted elements
           prod={product}
+          background="stalegray"
           listnum={listnum[index]}
           price={price[index]}
           onPurchase={()=>handlePurchase(product,price[index])}/>
@@ -78,7 +80,7 @@ function App() {
         .filter(product=>product.price>2000)
         .map(product=>(
           <Fragment key={product.title}>
-          <hr style={{borderColor: 'slategray'}}/>
+          <hr className='tinystyle'/>
           <p key={product.title}>
             {product.title} costs {product.price}
             </p>
