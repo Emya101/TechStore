@@ -8,44 +8,44 @@ import styles from './App.module.css';
 
 function App() {
     const products=[{
-        ImageSrc:"images/bellorus.jpg",
-        title:"imagine dragers",
+        ImageSrc:"/images/wireless headphones.jpg",
+        title:"Wireless Headphones",
         specification:[
-           "manifest.json provides metadata",
-           "manifest.json provides metadata",
-           "Supreme is the best man fr(no glaze)"
+           "Bluetooth 5.0 connectivity",
+            "Noise cancelling feature",
+            "20 hours of battery life"
         ],
         stockCount:10,
     },{
-        ImageSrc:"images/list.jpg",
-        title:"imagine using lists",
+        ImageSrc:"images/SmartCase.jpg",
+        title:"Smartphone Case",
         specification:[
-           "manifest.json provides metadata",
-           "manifest.json provides metadata",
-           "Supreme is the best man fr(no glaze)"
+            "Shock resistant design",
+            "Fits most modern phones",
+            "Available in multiple colors"
         ],
       stockCount:0},
       {
-        ImageSrc:"images/dragons.png",
-        title:"imagine dragons",
+        ImageSrc:"images/TV.jpg",
+        title:"4K Ultra HD Monitor",
         specification:[
-           "manifest.json provides metadata",
-           "manifest.json provides metadata",
-           "Supreme is the best man fr(no glaze)"
+           "27-inch display",
+            "1ms response time",
+            "Adjustable stand"
         ],
         stockCount:100,
       }]
 
     const listnum=[
-          "manifest.json provides metadata",
-           "manifest.json provides metadata",
-           "Supreme is the best man fr(no glaze)"
+          "A chance to gain 20000 PC Optimum Points",
+           "An Affordable 2 year Warranty",
+           "Be part of the Anti-Plastic Waste Initiative"
     ]
 
-    const price=["2010","2020","1920","2028"]
+    const price=["300","30","1000","2000"]
 
     function handlePurchase(prod,price){
-      alert(`you clicked on ${prod.title} product which cost $${price}`)
+      alert(`you Purchased ${prod.title} which cost $${price}`)
     }
 
   return (
@@ -63,7 +63,7 @@ function App() {
         }
       </Property>
 
-      <h2>Products which cost a 20,not a 19</h2>
+      <h2>Products which cost less than $1000</h2>
       <ul>
         {/* {products.map(({title,price}) => <li>
           {title} cost ${price}
@@ -77,7 +77,7 @@ function App() {
           ...product,
           price: Number(price[index])
         }))
-        .filter(product=>product.price>2000)
+        .filter(product=>product.price<1000)
         .map(product=>(
           <Fragment key={product.title}>
           <hr className={styles.tinystyle}/>

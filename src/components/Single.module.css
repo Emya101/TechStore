@@ -1,5 +1,5 @@
 .Animate{
-    animation: 2s pulse ease-in infinite;
+    animation: 2s pulse ease-in-out infinite;
 }
 
 @keyframes pulse{

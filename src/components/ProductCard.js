@@ -1,7 +1,26 @@
 import styles from'./ProductCard.module.css'
+import { useState } from 'react';
 // import './ProductCard.css'
 
 export function ProductCard({prod,price,background="blue",onPurchase,listnum,...restprops}){
+  const [stockCount, setStockCount]=useState(prod.stockCount)
+  const [showMore, setShowMore]=useState(prod.specification)
+  // let stockCount= prod.stockCount
+  // made use of local variables which do not rerender your ui,only store te value as a constant
+
+    function handleClick(){
+      setStockCount((prevStockCount)=> prevStockCount-1);
+      // stockCount= stockCount-1;
+      // console.log("stockCount",stockCount);
+      onPurchase(prod);
+    }
+
+    function handleTwoClicks(prod){
+      // setStockCount(stockCount-2);
+      setStockCount((prevStockCount)=> prevStockCount-1);
+      setStockCount((prevStockCount)=> prevStockCount-1);
+      alert(`You Purchased 2 ${prod.title}s`);
+    }
 
     function getProductTitle(title){
         return title;
@@ -11,12 +30,25 @@ export function ProductCard({prod,price,background="blue",onPurchase,listnum,...
     // <article className="container" style={{background}}>
     <article className={styles.container} style={{background}}>
     <h2>{getProductTitle(prod.title)}</h2>
-    <p> Hello my friend,i have a list of {price}</p>
-    <p> {prod.specification[0]}</p>
-    <img src={prod.ImageSrc} width="200px" height="200px"/>
-    <Status stockCount={prod.stockCount}/>
-    {prod.stockCount>0 &&(
-      <button onClick={()=>onPurchase(prod)}>Buy from {price} because {listnum} </button>)}
+    <p> selling {prod.title} for ${price}</p>
+    <button onClick={()=>setShowMore(!showMore)}>{showMore ? 'hide': 'show' }</button>
+    {showMore && <ul className={styles.Specification}>
+      <p>Specifications:</p>
+      {prod.specification.map((specification,index)=>(
+        <li key={index}>{specification}</li>
+      ))}
+    </ul>}<br></br>
+    <img src={prod.ImageSrc} width="200px" height="200px" className={styles.ImageWithBorder}/>
+    <Status stockCount={stockCount}/>
+    {stockCount>0 &&(
+      <>
+      <p>Price: ${price}</p>
+      <button onClick={()=>handleClick(prod)}>Buy for {listnum} </button>
+      </>
+      )}
+      {stockCount>1 &&
+      <button onClick={()=>handleTwoClicks(prod)}>Buy 2</button>
+      }
     </article>
   )
 }  

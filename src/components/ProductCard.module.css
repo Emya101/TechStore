@@ -3,11 +3,35 @@
     border-radius:8px;
     padding:16px;
     text-align:center;
+    display:inline-block;
     justify-content:center;
     flex-direction:column;
     width:auto;
-    height:400px;
+    height:auto;
+    min-height: 350px;
+    background-color: rgb(74, 68, 160);
     }
+  
+.Specification{
+  padding: 20px;
+  font-size: 14px;
+  background-color: rgb(218, 212, 212);
+  border-radius: 5px;
+  border: 3px solid black;
+  color:rgb(5, 12, 112);
+  list-style:circle;
+}
+
+.Specification li{
+  margin-bottom: 2px;
+}
+
+.ImageWithBorder{
+  background-color: white;
+  padding: 5px;
+  border: 3px solid black;
+  border-radius: 3px;
+}
 
 .NotAvailableTemplate{
   font-size:14px;
