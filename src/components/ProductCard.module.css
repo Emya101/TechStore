@@ -10,6 +10,7 @@
     height:auto;
     min-height: 350px;
     background-color: rgb(74, 68, 160);
+    position:relative;
     }
   
 .Specification{
@@ -42,3 +43,18 @@
     font-size:14px;
     color:lightgreen;
   }
+
+.favorite{
+  position: absolute;
+  top:12px;
+  right:12px;
+  border:0;
+  background: none;
+  font-size: 20px;
+
+  &:hover{
+    top:10px;
+    right:10px;
+    font-size: 24px;
+  }
+}

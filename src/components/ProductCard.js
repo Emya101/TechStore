@@ -2,7 +2,14 @@ import styles from'./ProductCard.module.css'
 import { useState } from 'react';
 // import './ProductCard.css'
 
-export function ProductCard({prod,price,background="blue",onPurchase,listnum,...restprops}){
+export function ProductCard({prod,
+  price,
+  background="blue",
+  onPurchase,
+  listnum,
+  isFavorite,
+  onFavorite})
+  {
   const [stockCount, setStockCount]=useState(prod.stockCount)
   const [showMore, setShowMore]=useState(prod.specification)
   // let stockCount= prod.stockCount
@@ -29,6 +36,7 @@ export function ProductCard({prod,price,background="blue",onPurchase,listnum,...
   return (
     // <article className="container" style={{background}}>
     <article className={styles.container} style={{background}}>
+      <button className={styles.favorite} onClick={()=>onFavorite(prod.id)}>{isFavorite?'❤️':'🤍'}</button>
     <h2>{getProductTitle(prod.title)}</h2>
     <p> selling {prod.title} for ${price}</p>
     <button onClick={()=>setShowMore(!showMore)}>{showMore ? 'hide': 'show' }</button>
