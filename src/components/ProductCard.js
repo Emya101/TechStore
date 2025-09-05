@@ -10,23 +10,24 @@ export function ProductCard({prod,
   isFavorite,
   onFavorite})
   {
-  const [stockCount, setStockCount]=useState(prod.stockCount)
+  // const [stockCount, setStockCount]=useState(prod.stockCount)
   const [showMore, setShowMore]=useState(prod.specification)
   // let stockCount= prod.stockCount
   // made use of local variables which do not rerender your ui,only store te value as a constant
 
     function handleClick(){
-      setStockCount((prevStockCount)=> prevStockCount-1);
+      // setStockCount((prevStockCount)=> prevStockCount-1);
       // stockCount= stockCount-1;
       // console.log("stockCount",stockCount);
-      onPurchase(prod);
+      onPurchase(prod.id,prod.stockCount-1);
     }
 
     function handleTwoClicks(prod){
       // setStockCount(stockCount-2);
-      setStockCount((prevStockCount)=> prevStockCount-1);
-      setStockCount((prevStockCount)=> prevStockCount-1);
+      // setStockCount((prevStockCount)=> prevStockCount-1);
+      // setStockCount((prevStockCount)=> prevStockCount-1);
       alert(`You Purchased 2 ${prod.title}s`);
+      onPurchase(prod.id,prod.stockCount-2);
     }
 
     function getProductTitle(title){
@@ -47,14 +48,14 @@ export function ProductCard({prod,
       ))}
     </ul>}<br></br>
     <img src={prod.ImageSrc} width="200px" height="200px" className={styles.ImageWithBorder}/>
-    <Status stockCount={stockCount}/>
-    {stockCount>0 &&(
+    <Status stockCount={prod.stockCount}/>
+    {prod.stockCount>0 &&(
       <>
       <p>Price: ${price}</p>
       <button onClick={()=>handleClick(prod)}>Buy for {listnum} </button>
       </>
       )}
-      {stockCount>1 &&
+      {prod.stockCount>1 &&
       <button onClick={()=>handleTwoClicks(prod)}>Buy 2</button>
       }
     </article>
