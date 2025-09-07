@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/TechStore/static/css/main.d2fbcb75.css",
-    "main.js": "/TechStore/static/js/main.eb8b14bd.js",
+    "main.js": "/TechStore/static/js/main.593eab93.js",
     "static/js/453.d1a76757.chunk.js": "/TechStore/static/js/453.d1a76757.chunk.js",
     "static/media/logo.svg": "/TechStore/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/TechStore/index.html",
     "main.d2fbcb75.css.map": "/TechStore/static/css/main.d2fbcb75.css.map",
-    "main.eb8b14bd.js.map": "/TechStore/static/js/main.eb8b14bd.js.map",
+    "main.593eab93.js.map": "/TechStore/static/js/main.593eab93.js.map",
     "453.d1a76757.chunk.js.map": "/TechStore/static/js/453.d1a76757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d2fbcb75.css",
-    "static/js/main.eb8b14bd.js"
+    "static/js/main.593eab93.js"
   ]
 }
