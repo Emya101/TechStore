@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Emya101/TechStore.git/static/css/main.d2fbcb75.css",
+    "main.js": "/Emya101/TechStore.git/static/js/main.057f512a.js",
+    "static/js/453.d1a76757.chunk.js": "/Emya101/TechStore.git/static/js/453.d1a76757.chunk.js",
+    "static/media/logo.svg": "/Emya101/TechStore.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Emya101/TechStore.git/index.html",
+    "main.d2fbcb75.css.map": "/Emya101/TechStore.git/static/css/main.d2fbcb75.css.map",
+    "main.057f512a.js.map": "/Emya101/TechStore.git/static/js/main.057f512a.js.map",
+    "453.d1a76757.chunk.js.map": "/Emya101/TechStore.git/static/js/453.d1a76757.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2fbcb75.css",
+    "static/js/main.057f512a.js"
+  ]
+}
