@@ -1,6 +1,6 @@
 export const products=[{
         id:1,
-        ImageSrc:"/images/wireless headphones.jpg",
+        ImageSrc:"images/wireless-headphones.jpg",
         title:"Wireless Headphones",
         specification:[
            "Bluetooth 5.0 connectivity",
